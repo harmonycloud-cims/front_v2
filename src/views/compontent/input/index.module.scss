@@ -1,0 +1,39 @@
+@mixin form_controller {
+  margin: 0;
+  border: 0;
+  display: inline-flex;
+  position: relative;
+  min-width: 100px;
+  flex-direction: column;
+  vertical-align: top;
+  color: rgba(0, 0, 0, 0.87);
+  padding-top: 10px;
+}
+.form100 {
+  @include form_controller;
+  width: 100%;
+}
+.form50 {
+  @include form_controller;
+  width: 50%;
+}
+.form46 {
+  @include form_controller;
+  width: 46%;
+}
+.form38 {
+  @include form_controller;
+  width: 38%;
+}
+.form33 {
+  @include form_controller;
+  width: 33%;
+}
+.form20 {
+  @include form_controller;
+  width: 20%;
+}
+.form15 {
+  @include form_controller;
+  width: 15%;
+}
