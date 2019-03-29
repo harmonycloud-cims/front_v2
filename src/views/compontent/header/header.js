@@ -65,11 +65,11 @@ class CommonHeader extends Component {
     //     this.props.dispatch({ type: 'LOGOUT' });
     //     this.props.history.push('/login');
     //   } else
-      if(nextProps.location.pathname === '/index'){
-        this.props.history.push('/index/welcome');
-      }else {
-        this.urlChangeReduxUpdate(nextProps.location.pathname);
-      }
+    if (nextProps.location.pathname === '/index') {
+      this.props.history.push('/index/welcome');
+    } else {
+      this.urlChangeReduxUpdate(nextProps.location.pathname);
+    }
     // }
   }
   componentWillUnmount() {

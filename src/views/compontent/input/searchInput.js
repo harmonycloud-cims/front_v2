@@ -97,7 +97,7 @@ class SearchInput extends Component {
   };
   // keyboard event
   keyDown = e => {
-    if(this.state.open){
+    if (this.state.open) {
       let temp = _.cloneDeep(this.state.count);
       let len = this.props.patientList.length; //patient count
       if (e.keyCode === 40) {
@@ -131,9 +131,9 @@ class SearchInput extends Component {
           temp = -1;
         }
       }
-      if(temp > 3) {
-        document.getElementById('myInput').scrollTop = (temp-3)*35;
-      } else if (temp > 0 && temp <= 3){
+      if (temp > 3) {
+        document.getElementById('myInput').scrollTop = (temp - 3) * 35;
+      } else if (temp > 0 && temp <= 3) {
         document.getElementById('myInput').scrollTop = 0;
       }
       this.setState({ count: temp });
@@ -192,11 +192,10 @@ class SearchInput extends Component {
                 </MenuItem>
               ))}
             </Typography>
-            {
-              this.props.openSearchProgress ? null :
+            {this.props.openSearchProgress ? null : (
               <MenuItem
                   onClick={() => this.handleClose({})}
-                  style={{borderTop: '1px solid rgba(0, 0, 0, 0.42)'}}
+                  style={{ borderTop: '1px solid rgba(0, 0, 0, 0.42)' }}
                   className={
                   this.state.count === -2
                     ? classes.menu_list_select
@@ -205,7 +204,7 @@ class SearchInput extends Component {
               >
                 Not Registration
               </MenuItem>
-            }
+            )}
           </Paper>
         </Popper>
       </Paper>
