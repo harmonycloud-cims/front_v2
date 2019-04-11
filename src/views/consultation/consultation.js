@@ -257,7 +257,7 @@ class Consulatation extends Component {
       };
       //获得消息事件
       socket.onmessage = msg => {
-        console.log(msg.data, 'onmessage');
+        // console.log(msg.data, 'onmessage');
         if (msg.data === 'Success') {
           this.initData();
         }
@@ -280,11 +280,11 @@ class Consulatation extends Component {
         });
         console.log('websocket发生了错误');
       };
-      this.timer = setInterval(() => {
-        if(socket.readyState === 1) {
-          socket.send(`${this.props.user.userId}: ${new Date()}`);
-        }
-      }, 2 * 60000);
+      // this.timer = setInterval(() => {
+      //   if(socket.readyState === 1) {
+      //     socket.send(`${this.props.user.userId}: ${new Date()}`);
+      //   }
+      // }, 2 * 60000);
     }
   };
   /* select页面 */
